@@ -50,6 +50,10 @@ def GetBestMatch(accepted, available, default=None):
     available: (list) A list of available languages. Each language
         should follow RFC2616. Example: [de, en, en-gb, fr-ca, fr-fr].
     default: (str) A default if no match was found.
+
+  Returns:
+    (str) The language that was the best match, or the default if no
+    match could be made.
   """
   if isinstance(accepted, str):
     accepted = GetPreferredLanguages(accepted)
